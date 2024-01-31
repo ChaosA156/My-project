@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
+  spinSpeed: 0
 --- !u!1 &5303753566748800868
 GameObject:
   m_ObjectHideFlags: 0
