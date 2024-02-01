@@ -24,12 +24,13 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-
+   
 
     public void TakeDamage(float damage)
     {
         healthAmount -= damage;
-        healthBar.fillAmount = healthAmount / 100f;
+        healthBar.transform.localScale = new Vector3(healthAmount/100, 1, 1);
+        //healthBar.fillAmount = healthAmount / 100f;
     }
 
     public void Heal(float healingAmount)
@@ -37,7 +38,8 @@ public class HealthManager : MonoBehaviour
         healthAmount += healingAmount;
         healingAmount = Mathf.Clamp(healthAmount, 0, 100);
 
-        healthBar.fillAmount = healthAmount / 100f;
+        healthBar.transform.localScale = new Vector3(healthAmount/100, 1, 1);
+        //healthBar.fillAmount = healthAmount / 100f;
     }
 }
 // Heal to recover health, note for later code.

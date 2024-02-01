@@ -17,7 +17,10 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TakeDamage(20);
+        }
     }
 
 
@@ -25,15 +28,16 @@ public class ShieldManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         shieldAmount -= damage;
-        shieldBar.fillAmount = shieldAmount / 100f;
+        shieldBar.transform.localScale = new Vector3(shieldAmount / 100, 1, 1);
+        //shieldBar.fillAmount = shieldAmount / 100f;
     }
 
     public void Recharge(float healingAmount)
     {
         shieldAmount += healingAmount;
         healingAmount = Mathf.Clamp(shieldAmount, 0, 100);
-
-        shieldBar.fillAmount = shieldAmount / 100f;
+        shieldBar.transform.localScale = new Vector3(shieldAmount / 100, 1, 1);
+        //shieldBar.fillAmount = shieldAmount / 100f;
     }
 }
 // Recharge to recover shields, note for later code.
