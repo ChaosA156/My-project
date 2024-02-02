@@ -18,9 +18,31 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TakeDamage(20);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Heal(20);
+        }
+
         if (healthAmount <= 0)
         {
             Application.LoadLevel(Application.loadedLevel);
+        }
+
+        if (healthAmount > 100)
+        {
+            healthAmount = 100;
+            healthBar.transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        if (healthAmount < 0)
+        {
+            healthAmount = 0;
+            healthBar.transform.localScale = new Vector3(0, 1, 1);
         }
     }
 

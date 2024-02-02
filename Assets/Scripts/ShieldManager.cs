@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,13 +18,28 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        //if (Input.GetKeyDown(KeyCode.Return))
         {
             TakeDamage(20);
         }
+
+        //if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Recharge(20);
+        }
+
+        if (shieldAmount > 100)
+        {
+            shieldAmount = 100;
+            shieldBar.transform.localScale = new Vector3(1, 1, 1);
+        }
+      
+        if (shieldAmount < 0)
+        {
+            shieldAmount = 0;
+            shieldBar.transform.localScale = new Vector3(0, 1, 1);
+        }
     }
-
-
 
     public void TakeDamage(float damage)
     {
