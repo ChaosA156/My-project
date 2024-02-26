@@ -64,9 +64,9 @@ public class Weapon : MonoBehaviour
         Vector3 direction = fpsCam.transform.forward + new Vector3(x, y, 0);
 
         //Graphics
-        Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
+        //Instantiate(bulletHoleGraphic, rayHit.point, Quaternion.Euler(0, 180, 0));
         //Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
-        muzzleFlash.GetComponent<ParticleSystem>().Play();
+        //muzzleFlash.GetComponent<ParticleSystem>().Play();
 
         bulletsLeft--;
         bulletsShot--;
