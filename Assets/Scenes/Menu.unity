@@ -546,6 +546,7 @@ GameObject:
   - component: {fileID: 187305428}
   - component: {fileID: 187305427}
   - component: {fileID: 187305426}
+  - component: {fileID: 187305430}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -640,6 +641,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &187305430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187305425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d9b9e79210382499cc5870b99e5f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 5103f87de54b2ac4c9a6c5a81c9ad4f2, type: 2}
 --- !u!1 &211159182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +1964,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 607275168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1685954501}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 988929170}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &607275168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3154,8 +3192,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -64.078186, y: -53.77637}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 406.55096, y: -117.46042}
+  m_SizeDelta: {x: 1097.4812, y: 167.1985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1257165000
 MonoBehaviour:
@@ -3177,8 +3215,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Credits\n\nGame Designer: TrueChaos56\n\nVoice Actors: \n\nCommunity Helper:
-    Spartan FN6 (TikTok, YouTube, Twitch, X)"
+  m_text: "Credits\n\nGame Designer: TrueChaos56\nVoice Actors: \nHelpers: Morgan
+    \"MM6\" Houston\nCommunity Supporter: SpartanFN6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 236b205138fc4204987c3ec66580af8e, type: 2}
   m_sharedMaterial: {fileID: 1405178245517744388, guid: 236b205138fc4204987c3ec66580af8e, type: 2}
@@ -3205,14 +3243,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3846,13 +3884,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 303783758}
   m_HandleRect: {fileID: 252505332}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 0
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 187305430}
+        m_TargetAssemblyTypeName: SoundMenu, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1644395998
 GameObject:
   m_ObjectHideFlags: 0
