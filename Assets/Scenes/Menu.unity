@@ -282,10 +282,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 86047800}
   m_HandleRect: {fileID: 1689350728}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2198,7 +2198,7 @@ AudioSource:
   m_GameObject: {fileID: 628300170}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3098625039599340844, guid: 5103f87de54b2ac4c9a6c5a81c9ad4f2, type: 2}
   m_audioClip: {fileID: 8300000, guid: f101ac963ace8284db0c8390705382de, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3216,7 +3216,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Credits\n\nGame Designer: TrueChaos56\nVoice Actors: \nHelpers: Morgan
-    \"MM6\" Houston\nCommunity Supporter: SpartanFN6"
+    \"MM6\" Houston\nCommunity Supporter: SpartanFN6\nMusic: Martin O'Donnell and
+    Michael Salvatori\nFractured Blamite was created under Microsoft's \"Game Content
+    Usage Rules\" using assets from Halo, and it is not endorsed by or affiliated
+    with Microsoft."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 236b205138fc4204987c3ec66580af8e, type: 2}
   m_sharedMaterial: {fileID: 1405178245517744388, guid: 236b205138fc4204987c3ec66580af8e, type: 2}
@@ -3243,8 +3246,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3659,10 +3662,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1978490085}
   m_HandleRect: {fileID: 534370393}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 20
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3885,9 +3888,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 252505332}
   m_Direction: 0
   m_MinValue: -80
-  m_MaxValue: 0
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

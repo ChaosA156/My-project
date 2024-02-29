@@ -8889,7 +8889,7 @@ AudioSource:
   m_GameObject: {fileID: 368164028}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3098625039599340844, guid: 5103f87de54b2ac4c9a6c5a81c9ad4f2, type: 2}
   m_audioClip: {fileID: 8300000, guid: e6378e098002e7a4a8be03ab349c2ecd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -10163,7 +10163,7 @@ GameObject:
   - component: {fileID: 534669903}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Player
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10830,9 +10830,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627754874}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -353.50986, y: -1.7612343, z: 298}
-  m_LocalScale: {x: 12, y: -5.8657, z: 12.732954}
+  m_LocalRotation: {x: -0, y: -0, z: -9.313226e-10, w: 1}
+  m_LocalPosition: {x: -353.50983, y: -1.761322, z: 298}
+  m_LocalScale: {x: 12, y: -5.8657, z: 12.732955}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1385500138}
@@ -11784,6 +11784,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  player: {fileID: 688613116}
+  turnSpeed: 20
   projectilePrefab: {fileID: 0}
   hasPowerup: 0
 --- !u!4 &688613123 stripped

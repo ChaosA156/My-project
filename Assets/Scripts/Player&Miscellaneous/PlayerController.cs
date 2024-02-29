@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 20f;
-    private float turnSpeed = 45.0f;
+    public GameObject player;
+    public float turnSpeed;
     private float horizontalInput;
     private float forwardInput;
     public GameObject projectilePrefab;
@@ -22,18 +23,20 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }  
 
     // Update is called once per frame;
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
         // Move the vehicle forward based on vertical input
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-        // Rotates the vehicle based on horizontal input
-        transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+
+        float y = Input.GetAxis("Mouse X") * turnSpeed;
+        player.transform.eulerAngles = new Vector3(0, player.transform.eulerAngles.y + y, 0);
     }
 }
