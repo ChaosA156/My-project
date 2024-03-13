@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
+    public ShieldManager shieldManager;
+
     public Image healthBar;
     public float healthAmount = 100f;
 
@@ -50,8 +52,15 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        healthAmount -= damage;
-        healthBar.transform.localScale = new Vector3(healthAmount/100, 1, 1);
+        if (shieldManager.shieldAmount <= 0)
+        {
+            healthAmount -= damage;
+            healthBar.transform.localScale = new Vector3(healthAmount/100, 1, 1);
+        } else
+        {
+            shieldManager.TakeDamage(damage);
+        }
+        
         //healthBar.fillAmount = healthAmount / 100f;
     }
 

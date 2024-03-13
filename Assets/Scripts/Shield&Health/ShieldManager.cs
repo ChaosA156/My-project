@@ -18,15 +18,6 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Return))
-        {
-            TakeDamage(20);
-        }
-
-        //if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Recharge(20);
-        }
 
         if (shieldAmount > 100)
         {

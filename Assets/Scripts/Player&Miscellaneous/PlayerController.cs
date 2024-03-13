@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 20f;
+    public float defaultSpeed = 20f;
     public GameObject player;
     public float turnSpeed;
     private float horizontalInput;
@@ -38,5 +40,13 @@ public class PlayerController : MonoBehaviour
 
         float y = Input.GetAxis("Mouse X") * turnSpeed;
         player.transform.eulerAngles = new Vector3(0, player.transform.eulerAngles.y + y, 0);
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.W))
+        {
+            speed = speed * 4;
+        } else
+        {
+            speed = defaultSpeed;
+        }
     }
 }
